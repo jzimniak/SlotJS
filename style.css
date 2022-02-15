@@ -1,0 +1,134 @@
+.game{
+    width: 40%;
+    height: 80%;
+}
+.icon{
+    max-width: 100%; 
+    max-height: 100%;
+    height: 70%;
+    transform: scale(0.7);    
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topdiv{
+    display: flex;
+    flex-wrap: wrap; 
+    width: 80%;height: 13.5%;
+    background-color: #3b3b3b;
+    position: absolute;
+    z-index: 2;
+    border-radius: 5vh 5vh 0 0;
+}
+.middiv{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 80%;
+    height: 63%;
+    justify-content: center;
+    position: absolute;
+    margin-top: 13.5vh;
+    background-color: #00000069;
+}
+.botdiv{
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 80%;
+    height: 13.5%;
+    background-color: #3b3b3b; 
+    position: absolute;
+    margin-top: 76.5vh;
+    border-radius: 0 0 5vh 5vh;
+}
+.row{
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%;
+    height: 33.333%;
+}
+.animated-div{
+    height: 100%;
+    aspect-ratio: 1.5/1;
+    max-width: 100%;
+    margin-top: -63vh;
+}
+.font{
+    font-family: sans-serif;
+    color: white;
+}
+.vis-hid{
+    visibility: hidden;
+}
+.scale1{
+    transform: scale(1);
+}
+.divIcon{
+    position: relative;
+    width: 100%;
+    flex: 0 0 33.333%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-100{
+    height: 100%;
+}
+.w-100{
+    width: 100%;
+}
+.pos-rel{
+    position: relative;
+}
+.spinbutton{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 5vh 0;border: none;
+    font-size: 40px;
+    background-color: #096fc8;
+    color: white;
+}
+.spinbutton:disabled{
+    background-color: #5b8cb8df;
+    color: rgb(138, 138, 138);
+}
+.spinbutton:hover{
+    background-color: #1b7ed4;
+}
+.changebetbutton{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size:20px;
+}
+.changebetbutton:hover{
+    font-size:30px;
+}
+
+html, body {
+    width: 100%;
+    height:100%;
+  }
+  
+  body {
+    background: linear-gradient(90deg, rgba(250,166,162,1) 0%, rgba(155,251,144,1) 51%, rgba(142,252,242,1) 70%, rgba(150,183,254,1) 90%, rgba(255,138,244,1) 100%);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      margin:0;
+      overflow: hidden;
+      height: 100%;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }

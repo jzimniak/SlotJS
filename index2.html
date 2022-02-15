@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SlotJS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+    <script src="game.js"></script>
+</head>
+<body onload="loadVariables()">
+    <div class="center h-100 w-100">
+        <div style="width: 80%;height: 90%;border-radius: 10px;">
+            <div class="topdiv">
+                <div class="center h-100 w-100 pos-rel" style="flex: 0 0 25%;">
+                    <div class="pos-rel w-100 center h-100" style="flex: 0 0 50%;flex-wrap: wrap;">
+                        <div class="pos-rel w-100 center" style="height: 50%;">
+                            <img src="./icons/gem-solid-red.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-red.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-red.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">x9</span>
+                        </div>
+                        <div class="pos-rel w-100 center h-100" style="height: 50%;">
+                            <img src="./icons/gem-solid-yellow.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-yellow.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-yellow.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">x30</span>
+                        </div>
+                    </div>
+                    <div class="pos-rel w-100 center h-100" style="flex: 0 0 50%;flex-wrap: wrap;">
+                        <div class="pos-rel w-100 center" style="height: 50%;">
+                            <img src="./icons/gem-solid-green.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-green.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-green.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">x400</span>
+                        </div>
+                        <div class="pos-rel w-100 center" style="height: 50%;">
+                            <img src="./icons/gem-solid-blue.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-blue.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-blue.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">x20000</span>
+                        </div>
+                    </div>    
+                </div>
+                <div class="center h-100 w-100 pos-rel" style="flex: 0 0 50%;">
+                    <span class="font" style="font-size:50px;">DIAMONDS FORTUNE</span>
+                </div>
+                <div class="center h-100 w-100 pos-rel" style="flex: 0 0 25%;">
+                    <div style="position: relative;width: 100%;flex: 0 0 50%;height: 100%;display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+                        <div style="position: relative;width: 100%;height: 50%;display: flex;justify-content: center;align-items: center;">
+                            <img src="./icons/gem-solid-red.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-red.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-red.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">12.5%</span>
+                        </div>
+                        <div style="position: relative;width: 100%;height: 50%;display: flex;justify-content: center;align-items: center;">
+                            <img src="./icons/gem-solid-yellow.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-yellow.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-yellow.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">2.7%</span>
+                        </div>
+                    </div>
+                    <div style="position: relative;width: 100%;flex: 0 0 50%;height: 100%;display: flex;justify-content: center;align-items: center; flex-wrap: wrap;">
+                        <div style="position: relative;width: 100%;height: 50%;display: flex;justify-content: center;align-items: center;">
+                            <img src="./icons/gem-solid-green.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-green.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-green.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">0.33%</span>
+                        </div>
+                        <div style="position: relative;width: 100%;height: 50%;display: flex;justify-content: center;align-items: center;">
+                            <img src="./icons/gem-solid-blue.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-blue.svg" class="icon" style="height: 50%;">
+                            <img src="./icons/gem-solid-blue.svg" class="icon" style="height: 50%;">
+                            
+                            <span class="font">0.0001%</span>
+                        </div>
+                    </div>  
+                </div>
+            </div>  
+            <div class="middiv">
+                <div id="anim" class="animated-div">
+                    <div class="row">
+                        <div class="divIcon">
+                            <img id="0" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                        <div class="divIcon">
+                            <img id="1" src="./icons/gem-solid.svg" class="icon vis-hid">    
+                        </div>
+                        <div class="divIcon">
+                            <img id="2" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="divIcon">
+                            <img id="3" src="./icons/gem-solid.svg" class="icon vis-hid">        
+                        </div>
+                        <div class="divIcon">
+                            <img id="4" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                        <div class="divIcon">
+                            <img id="5" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="divIcon">
+                            <img id="6" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                        <div class="divIcon">
+                            <img id="7" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                        <div class="divIcon">
+                            <img id="8" src="./icons/gem-solid.svg" class="icon vis-hid">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="divIcon">
+                            <img id="9" src="./icons/gem-solid.svg" class="icon">
+                        </div>
+                        <div class="divIcon">
+                            <img id="10" src="./icons/gem-solid.svg" class="icon">
+                        </div>
+                        <div class="divIcon">
+                            <img id="11" src="./icons/gem-solid.svg" class="icon">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="divIcon">
+                            <img id="12" src="./icons/gem-solid.svg" class="icon scale1">
+                        </div>
+                        <div class="divIcon">
+                            <img id="13" src="./icons/gem-solid.svg" class="icon scale1">
+                        </div>
+                        <div class="divIcon">
+                            <img id="14" src="./icons/gem-solid.svg" class="icon scale1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="divIcon">
+                            <img id="15" src="./icons/gem-solid.svg" class="icon">
+                        </div>
+                        <div class="divIcon">
+                            <img id="16" src="./icons/gem-solid.svg" class="icon">
+                        </div>
+                        <div class="divIcon">
+                            <img id="17" src="./icons/gem-solid.svg" class="icon">
+                        </div>
+                    </div>
+                </div>        
+            </div> 
+            <div class="botdiv">
+                <div style="height: 85%;width: 20%;margin:auto;">
+                    <div class="center w-100" style="flex-wrap: wrap; height: 50%;">
+                        <span class="font" style="font-size: 30px;">BALANCE</span>
+                    </div>
+                    <div class="center w-100" style="flex-wrap: wrap; height: 50%;">
+                        <span id="balance" class="font" style="font-size: 30px;"></span>
+                    </div>
+                </div>
+                <div class="h-100" style="width: 60%;display: flex;">
+                    <div class="h-100 center" style="width: 70%;">
+                        <span id="info" class="font" style="font-size: 35px;"></span>
+                    </div>
+                    <div class="h-100" style="width: 30%;display: flex;align-items: center;">
+                        <div class="center h-100" style="width: 20%; ">
+                            <button id="buttonDrop" onclick="dropAmount()" class="changebetbutton" >
+                                <span>
+                                    <
+                                </span>
+                            </button>
+                        </div>
+                        <div class="center" style="height: 80%;width: 60%;">
+                            <span id="betSize" class="font" style="font-size: 40px;"></span>
+                        </div>
+                        <div class="center h-100" style="width: 20%;">
+                            <button id="buttonRise" onclick="riseAmount()" class="changebetbutton">
+                                <span >
+                                    >
+                                </span>
+                            </button>
+                        </div>
+                    </div>        
+                </div>
+                <dvi class="center h-100" style="width: 20%;">
+                    <button id="spinButton" class="spinbutton" onclick="startSlot()">SPIN</button>
+                </dvi>
+            </div> 
+        </div>
+    </div>   
+</body>
+</html>
+
